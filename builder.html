@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume Builder | Create Your Resume</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/builder.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="builder-header">
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="images/logo.svg" alt="ResumeCraft Logo">
+                        <span>ResumeCraft</span>
+                    </a>
+                </div>
+                <div class="builder-actions">
+                    <button class="btn btn-secondary" id="preview-btn">
+                        <i class="fas fa-eye"></i> Preview
+                    </button>
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle">
+                            <i class="fas fa-download"></i> Export
+                        </button>
+                        <div class="dropdown-menu">
+                            <a href="#" id="export-pdf">PDF</a>
+                            <a href="#" id="export-docx">Word (.docx)</a>
+                        </div>
+                    </div>
+                    <button class="btn btn-primary" id="save-btn">
+                        <i class="fas fa-save"></i> Save
+                    </button>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Builder Main -->
+    <main class="builder">
+        <div class="builder-container">
+            <!-- Sidebar -->
+            <div class="builder-sidebar">
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress" id="form-progress"></div>
+                    </div>
+                </div>
+                
+                <ul class="builder-nav">
+                    <li class="active" data-section="templates">
+                        <i class="fas fa-palette"></i>
+                        <span>Templates</span>
+                    </li>
+                    <li data-section="personal">
+                        <i class="fas fa-user"></i>
+                        <span>Personal Info</span>
+                    </li>
+                    <li data-section="education">
+                        <i class="fas fa-graduation-cap"></i>
+                        <span>Education</span>
+                    </li>
+                    <li data-section="experience">
+                        <i class="fas fa-briefcase"></i>
+                        <span>Experience</span>
+                    </li>
+                    <li data-section="skills">
+                        <i class="fas fa-code"></i>
+                        <span>Skills</span>
+                    </li>
+                    <li data-section="projects">
+                        <i class="fas fa-folder-open"></i>
+                        <span>Projects</span>
+                    </li>
+                    <li data-section="languages">
+                        <i class="fas fa-language"></i>
+                        <span>Languages</span>
+                    </li>
+                    <li data-section="certificates">
+                        <i class="fas fa-certificate"></i>
+                        <span>Certificates</span>
+                    </li>
+                    <li data-section="custom">
+                        <i class="fas fa-plus-circle"></i>
+                        <span>Custom Section</span>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- Content -->
+            <div class="builder-content">
+                <!-- Templates Section -->
+                <section id="templates-section" class="builder-section active">
+                    <div class="section-header">
+                        <h2>Choose a Template</h2>
+                        <p>Select a professional template for your resume</p>
+                    </div>
+                    
+                    <div class="templates-grid">
+                        <div class="template-item" data-template="modern">
+                            <div class="template-preview">
+                                <img src="images/templates/template1.jpg" alt="Modern Template">
+                                <div class="template-overlay">
+                                    <button class="btn btn-primary">Use This Template</button>
+                                </div>
+                            </div>
+                            <h3>Modern</h3>
+                        </div>
+                        
+                        <div class="template-item" data-template="professional">
+                            <div class="template-preview">
+                                <img src="images/templates/template2.jpg" alt="Professional Template">
+                                <div class="template-overlay">
+                                    <button class="btn btn-primary">Use This Template</button>
+                                </div>
+                            </div>
+                            <h3>Professional</h3>
+                        </div>
+                        
+                        <div class="template-item" data-template="creative">
+                            <div class="template-preview">
+                                <img src="images/templates/template3.jpg" alt="Creative Template">
+                                <div class="template-overlay">
+                                    <button class="btn btn-primary">Use This Template</button>
+                                </div>
+                            </div>
+                            <h3>Creative</h3>
+                        </div>
+                        
+                        <div class="template-item" data-template="executive">
+                            <div class="template-preview">
+                                <img src="images/templates/template4.jpg" alt="Executive Template">
+                                <div class="template-overlay">
+                                    <button class="btn btn-primary">Use This Template</button>
+                                </div>
+                            </div>
+                            <h3>Executive</h3>
+                        </div>
+                        
+                        <div class="template-item" data-template="minimal">
+                            <div class="template-preview">
+                                <img src="images/templates/template5.jpg" alt="Minimal Template">
+                                <div class="template-overlay">
+                                    <button class="btn btn-primary">Use This Template</button>
+                                </div>
+                            </div>
+                            <h3>Minimal</h3>
+                        </div>
+                        
+                        <div class="template-item" data-template="elegant">
+                            <div class="template-preview">
+                                <img src="images/templates/template6.jpg" alt="Elegant Template">
+                                <div class="template-overlay">
+                                    <button class="btn btn-primary">Use This Template</button>
+                                </div>
+                            </div>
+                            <h3>Elegant</h3>
+                        </div>
+                    </div>
+                    
+                    <div class="section-footer">
+                        <button class="btn btn-primary next-section">Continue</button>
+                    </div>
+                </section>
+                
+                <!-- Personal Info Section -->
+                <section id="personal-section" class="builder-section">
+                    <div class="section-header">
+                        <h2>Personal Information</h2>
+                        <p>Add your contact and personal details</p>
+                    </div>
+                    
+                    <div class="form-container">
+                        <div class="form-group">
+                            <label for="full-name">Full Name*</label>
+                            <input type="text" id="full-name" name="full-name" placeholder="e.g., John Doe" required>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="job-title">Job Title*</label>
+                                <input type="text" id="job-title" name="job-title" placeholder="e.g., Software Engineer" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="location">Location</label>
+                                <input type="text" id="location" name="location" placeholder="e.g., New York, NY">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email">Email Address*</label>
+                                <input type="email" id="email" name="email" placeholder="e.g., john.doe@example.com" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input type="tel" id="phone" name="phone" placeholder="e.g., (123) 456-7890">
+                            </div>
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="linkedin">LinkedIn</label>
+                                <div class="input-with-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                    <input type="url" id="linkedin" name="linkedin" placeholder="e.g., linkedin.com/in/johndoe">
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="website">Website/Portfolio</label>
+                                <div class="input-with-icon">
+                                    <i class="fas fa-globe"></i>
+                                    <input type="url" id="website" name="website" placeholder="e.g., johndoe.com">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="summary">Professional Summary</label>
+                            <textarea id="summary" name="summary" rows="4" placeholder="Write a short summary about yourself and your career objectives..."></textarea>
+                        </div>
+                    </div>
+                    
+                    <div class="section-footer">
+                        <button class="btn btn-secondary prev-section">Back</button>
+                        <button class="btn btn-primary next-section">Continue</button>
+                    </div>
+                </section>
+            </div>
+            
+            <!-- Preview Pane (hidden on mobile) -->
+            <div class="builder-preview">
+                <div class="preview-container">
+                    <div class="resume-preview" id="resume-preview">
+                        <div class="resume-loading">
+                            <p>Select a template to preview your resume</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    
+    <!-- Preview Modal (for mobile) -->
+    <div class="preview-modal" id="preview-modal">
+        <div class="preview-modal-content">
+            <span class="close-preview">&times;</span>
+            <h3>Resume Preview</h3>
+            <div class="mobile-preview-container">
+                <div class="resume-preview" id="mobile-resume-preview">
+                    <!-- Resume Preview Content (will be populated by JS) -->
+                </div>
+            </div>
+            <div class="preview-modal-footer">
+                <button class="btn btn-primary" id="continue-editing">Continue Editing</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/builder.js"></script>
+</body>
+</html> 
